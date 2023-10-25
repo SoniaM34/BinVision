@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/setting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,29 +51,12 @@ class AccueilPage extends StatelessWidget {
                 // Naviguer vers la page suivante
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PageSuivante()),
+                  MaterialPageRoute(builder: (context) => Setting()),
                 );
               },
               child: Text("SUIVANT"),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class PageSuivante extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Page Suivante"),
-      ),
-      body: Center(
-        child: Text(
-          "Contenu de la page suivante",
-          style: TextStyle(fontSize: 24.0),
         ),
       ),
     );
