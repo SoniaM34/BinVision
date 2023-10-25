@@ -1,3 +1,5 @@
+import 'package:binvision/components/bottom_navigationbar_widget.dart';
+import 'package:binvision/screens/scan.dart';
 import 'package:flutter/material.dart';
 import 'screens/centre_de_tri.dart';
 
@@ -73,7 +75,7 @@ class AccueilPage extends StatelessWidget {
                 // Naviguer vers la page suivante
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CentreDeTri()),
+                  MaterialPageRoute(builder: (context) => NavigationBarApp()),
                 );
               },
               child: Text("Suivant"),
