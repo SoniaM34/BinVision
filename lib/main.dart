@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/setting.dart';
+import 'screens/centre_de_tri.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +51,7 @@ class AccueilPage extends StatelessWidget {
                 // Naviguer vers la page suivante
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Setting()),
+                  MaterialPageRoute(builder: (context) => CentreDeTri()),
                 );
               },
               child: Text("SUIVANT"),
