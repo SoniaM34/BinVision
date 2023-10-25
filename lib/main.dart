@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
       ),
       home: const AccueilPage(),
     );
@@ -27,26 +27,48 @@ class AccueilPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Accueil"), // Titre de la page
+        title: Text("Bienvenue sur BinVision"),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset('assets/BV_icon.png'),
-            Text(
-              "Active ta localisation",
-              style: TextStyle(fontSize: 24.0),
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Image.asset('assets/BV_icon.png'), // Remplacez 'assets/logo.png' par le chemin de votre image de logo
             ),
-            Text(
-              "OU",
-              style: TextStyle(fontSize: 24.0),
+            Text("Bienvenue sur BinVision", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 32)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                /*Expanded(
+                  child: Icon(Icons.location_on),
+                ),*/
+                Expanded(
+                  child: Text("Activez la localisation", textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ],
             ),
-            Text(
-              "Indique ton code postal",
-              style: TextStyle(fontSize: 24.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Expanded(
+                  child: Text("ou", textAlign: TextAlign.center,),
+                ),
+              ],
+            ),
+            Text("Indiquez votre code postal",
+              style: const TextStyle(fontWeight: FontWeight.bold)),
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: TextFormField(
+                decoration: InputDecoration(labelText: 'Code postal'),
+              ),
             ),
             ElevatedButton(
+              style: ButtonStyle(
+                minimumSize: MaterialStateProperty.all(Size(150.0, 50.0)), // Ajustez la taille ici
+              ),
               onPressed: () {
                 // Naviguer vers la page suivante
                 Navigator.push(
@@ -54,7 +76,7 @@ class AccueilPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => CentreDeTri()),
                 );
               },
-              child: Text("SUIVANT"),
+              child: Text("Suivant"),
             ),
           ],
         ),
