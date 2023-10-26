@@ -61,6 +61,7 @@ flutter:
   assets:
     - assets/BV_icon.png
     - assets/map.png
+    - assets/scan.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
