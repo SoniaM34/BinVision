@@ -1,7 +1,5 @@
 import 'package:binvision/components/bottom_navigationbar_widget.dart';
-import 'package:binvision/screens/scan.dart';
 import 'package:flutter/material.dart';
-import 'screens/centre_de_tri.dart';
 
 void main() {
   runApp(const MyApp());

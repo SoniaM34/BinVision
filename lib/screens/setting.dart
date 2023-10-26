@@ -6,6 +6,7 @@ class Setting extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Reglage"),
+        backgroundColor: Colors.teal,
       ),
       body: const Center(
         child: Text(

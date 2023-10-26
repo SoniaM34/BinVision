@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CentreDeTri extends StatelessWidget {
@@ -6,6 +7,7 @@ class CentreDeTri extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Centre de tri"),
+        backgroundColor: Colors.teal,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -14,7 +16,7 @@ class CentreDeTri extends StatelessWidget {
             "Position : 34000 - Montpellier",
             style: TextStyle(fontSize: 24.0),
           ),
-          SizedBox(height: 16.0), // Espacement entre le texte et l'image
+          SizedBox(height: 30.0), // Espacement entre le texte et l'image
           Image.asset('assets/map.png'),
           SizedBox(height: 16.0), // Espacement entre l'image et les bandeaux
           Container(
